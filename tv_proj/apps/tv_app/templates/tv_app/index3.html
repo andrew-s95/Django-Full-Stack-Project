@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Show Info</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>TV Show: {{show_id.id}}</h1>
+        <a href="/shows">Go Back</a>
+        <p>Title: {{show_id.title}}</p>
+        <p>Netword: {{show_id.network}}</p>
+        <p>Release Date: {{show_release}}</p>
+        <p>Description: {{show_id.desc}}</p>
+        <p>Last Updated: {{show_id.updated_at}}</p>
+        <p><a href="/shows/{{show_id.id}}/edit">Edit</a> | <a href="/shows/{{show_id.id}}/delete">Delete</a></p>
+    </div>
+</body>
+</html>

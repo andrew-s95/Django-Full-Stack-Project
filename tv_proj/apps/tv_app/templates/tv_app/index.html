@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>All Shows</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Shows</h1>
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>Title</th>
+                <th>Network</th>
+                <th>Release Date</th>
+                <th>Actions</th>
+            </tr>
+            {%for shows in Shows%}
+            <tr>
+                <td>{{shows.id}}</td>
+                <td>{{shows.title}}</td>
+                <td>{{shows.network}}</td>
+                <td>{{shows.release_date}}</td>
+                <td><a href="/shows/{{shows.id}}">Show</a> | <a href="/shows/{{shows.id}}/edit">Edit</a> | <a href="/shows/{{shows.id}}/delete">Delete</a></td>
+            </tr>
+            {%endfor%}
+        </table>
+        <a href="/shows/new">Add a New Show</a>
+    </div>
+</body>
+</html>
